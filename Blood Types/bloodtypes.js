@@ -1,52 +1,52 @@
 function canGiveBlood(blood1, blood2) {
     if (blood1[0] == "O"){
         if (blood1[1] == "-"){
-            return true
+            return true;
         }
         else if (blood1[1] == "+"){
             if (blood2[blood2.length-1] == "+"){
-                return true
+                return true;
             }
         }
         else {
-          return false
+            return false;
         }
     }
     else if (blood1[0] == "A" && blood1.length == 2){
         if (blood1[1] == "-" && blood2[0] == "A"){
-            return true
+            return true;
         }
         else if (blood1[1] == "+" && blood2[blood2.length-1] == "+"){
-            return true
+            return true;
         }
         else {
-          return false
+            return false;
         }
     }
     else if (blood1[0] == "B" && blood1.length == 2){
         if (blood1[1] == "-" && (blood2[0] == "B" || blood2.length == 3)){
-            return true
+            return true;
         } 
         else if (blood1[1] == "+" && blood2[blood2.length-1] == "+"){
-            return true
+            return true;
         }
         else {
-            return false
+            return false;
         }
     }
     else if (blood1.length == 3){
         if (blood1 == "AB+" && blood2 == "AB+"){
-            return true
+            return true;
         }
         else if (blood1 == "AB-" && blood2.length == 3){
-            return true
+            return true;
         }
         else {
-          return false
+            return false;
         }
     }
     else {
-      return false
+        return false;
     }
 }
 
